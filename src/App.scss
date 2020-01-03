@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+// fonts
+
+@font-face {
+	font-family: 'ACaslon';
+	src: url("../src/fonts/ACaslonPro-Regular.otf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+	font-family: 'Springville';
+	src: url("../src/fonts/Springville-Regular3.otf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+// vars
+
+$font-family-primary: "Springville", sans-serif;
+$font-family-secondary: "ACaslon", sans-serif;
+$font-family-tertiary: "Arial", sans-serif;
+
+//responsive
+
+@mixin breakpoint($point) {
+  
+  @if $point==cinema {
+    @media (min-width: 90em) {
+      @content;
+    }
+  }
+
+  @if $point==desktop {
+    @media (min-width: 64em) {
+      @content;
+    }
+  } @else if $point==laptop {
+    @media (min-width: 64em) {
+      @content;
+    }
+  } @else if $point==tablet {
+    @media (min-width: 48em) {
+      @content;
+    }
+  } @else if $point==ipad-landscape {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $point==phablet {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  } @else if $point==mobileonly {
+    @media (max-width: 47.9375em) {
+      @content;
+    }
+  } @else if $point==tabletonly {
+    @media (min-width: 48em) and (max-width: 63.9375em) {
+      @content;
+    }
   }
 }
+/*** example of breakpoint usage */
+/*
+.current_selector {
+    // mobile here
+    background: red;
+    @include breakpoint(tablet){
+        // tablet min-width is 768px
+        // overrides mobile
+        background: green;
+    }
+    @include breakpoint(desktop) {
+        // desktop min-width is 1120px
+        // overrides tablet
+        background: blue;
+    }
+}
+*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+* {
+  box-sizing: border-box;
+}
+
+// nav
+
+.navbar {
+  z-index: 10;
+  background-color: white;
+  position: sticky;
+  width: auto;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  max-height: 122px;
+  justify-content: space-between;
+  padding: 4% 1% 4% 1%;
+  top: 0;
+
+  @include breakpoint(tablet) {
+    padding: 4% 8% 4% 8%;
+  }
+
+  .logo {
+      width: 140px;
+      height: auto;
+      justify-content: flex-start;
+    
+    @include breakpoint(phablet){
+      width: 195px;
+      height: auto;
+      justify-content: flex-start;
+    }
+  
+  }
+
+  &-items {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 11px;
+    color: #828282;
+    font-family: arial;
+    font-weight: bold;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.burger-menu {
+  margin-top: 8px;
+  cursor: pointer;
+  margin-left: 20%;
+  flex-direction: row;
+  justify-content: flex-end;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login {
+  cursor: pointer;
+  margin-left: 20%;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-transform: uppercase;
 }
+
+.dropdown {
+  position: fixed;
+  top: 60px;
+  display: flex;
+  right: 50px;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  ul {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  li {
+    list-style: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background-color: #bab9b9;
+    opacity: 50%;
+  }
+
+}
+
+
+
