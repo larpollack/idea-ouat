@@ -37,6 +37,7 @@ export default class Navbar extends Component {
 
     displayDropDown = () => {
       return (
+        <div className="menu">
           <ul className="dropdown">
             <li className="nav-link">
               Lorem
@@ -45,6 +46,7 @@ export default class Navbar extends Component {
               Ipsum
             </li>
           </ul>
+        </div>
         
         )
     }

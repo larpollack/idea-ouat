@@ -136,13 +136,18 @@ $font-family-tertiary: "Arial", sans-serif;
   text-transform: uppercase;
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .dropdown {
   position: fixed;
   top: 60px;
-  display: flex;
-  right: 50px;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-self: flex-end;
+  text-align: right;
+  
 
   ul {
     margin: 10px;
