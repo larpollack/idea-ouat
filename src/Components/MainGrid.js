@@ -30,7 +30,7 @@ export default class MainGrid extends Component {
     this.widthResize = () => {
       this.sortByDate()
       this.setState({width: window.innerWidth})
-      this.state.width < 720 ? main = sorted : main = MainContent
+      this.state.width < 769 ? main = sorted : main = MainContent
     }
 
     return (
@@ -39,7 +39,7 @@ export default class MainGrid extends Component {
         <div className="main-grid-wrapper">
           <Main key={content.id}
           id={content.id}
-          date={content.id}
+          date={content.date}
           body={content.body}
           sub={content.sub}
           link={content.link}

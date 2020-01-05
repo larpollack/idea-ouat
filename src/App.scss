@@ -125,6 +125,7 @@ $font-family-tertiary: "Arial", sans-serif;
   margin-left: 20%;
   flex-direction: row;
   justify-content: flex-end;
+  z-index: 20;
   
 }
 
@@ -145,25 +146,31 @@ $font-family-tertiary: "Arial", sans-serif;
 
 .dropdown {
   
-  position: fixed;
+  // position: fixed;
+  position: absolute;
   align-self: flex-end;
   text-align: right;
-  margin-top: 15px;
+  margin-top: 20px;
   
 
   ul {
     margin: 10px;
     padding: 20px;
+    display: flex;
+    flex-direction: row;
   }
 
   li {
     list-style: none;
     text-transform: uppercase;
     cursor: pointer;
+    background-color: white;
+    align-self: flex-end;
   }
 
   li:hover {
     background-color: #bab9b9;
+    align-self: flex-end;
     opacity: 50%;
   }
 
@@ -176,6 +183,8 @@ $font-family-tertiary: "Arial", sans-serif;
   color: #ffffff;
   margin: auto;
   max-width: 1440px;
+  background-size: cover;
+  padding-bottom: 5%;
 
   &-wrapper {
     position: absolute;
@@ -222,4 +231,61 @@ $font-family-tertiary: "Arial", sans-serif;
   }
 }
 
+// main
 
+  .main-grid {
+    width: 100%;
+    height: auto;
+    font-family: $font-family-primary;
+    column-count: 2;
+    column-gap: 5%;
+    padding: 0 5% 5% 5%;
+
+    @include breakpoint(tablet) {
+      column-count: 3;
+    }
+
+    &-wrapper {
+      break-inside: avoid-column;
+    }
+  }
+
+  .main {
+    &-img {
+      width: 100%;
+    }
+    &-body {
+      font-size: 3.8vw;
+      line-height: 3.7vw;
+      text-decoration: none;
+      color: black;
+      &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+    &-date {
+      font-family: $font-family-tertiary;
+      text-transform: uppercase;
+      color: #767676;
+      font-size: 1vw;
+      margin: 10% 0 10% 0;
+    }
+
+    &-sub, &-link {
+      font-family: $font-family-secondary;
+      color: #131313;
+      font-size: 1.3vw;
+      margin: 8% 0 15% 0;
+    }
+
+    &-link {
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+  }
+
+  .separator {
+    color: #dbdbdb;
+    margin-bottom: 15%;
+  }
