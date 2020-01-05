@@ -10,7 +10,7 @@ const MainContent = [
   },
   {
     id: 2,
-    dateId: 3,
+    dateId: 4,
     date: 'January 21 2017' ,
     body: 'Esse airport ryokan soft power.',
     sub: 'Presented by',
@@ -19,7 +19,7 @@ const MainContent = [
   },
   {
     id: 3,
-    dateId: 1,
+    dateId: 3,
     date: 'February 2 2017' ,
     body: 'Sharp bureaux sleepy K-pop carefully curated.',
     sub: 'Presented by',
@@ -28,7 +28,7 @@ const MainContent = [
   },
   {
     id: 4,
-    dateId: 4,
+    dateId: 2,
     date: 'January 18 2017' ,
     body: 'K-pop extraordinary.',
     sub: 'Presented by',
@@ -37,7 +37,7 @@ const MainContent = [
   },
   {
     id: 5,
-    dateId: 3,
+    dateId: 1,
     date: 'January 27 2017' ,
     body: 'St Moritz uniforms Beams.',
     sub: 'Presented by',

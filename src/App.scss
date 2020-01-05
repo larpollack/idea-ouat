@@ -255,10 +255,14 @@ $font-family-tertiary: "Arial", sans-serif;
       width: 100%;
     }
     &-body {
-      font-size: 3.8vw;
-      line-height: 3.7vw;
+      font-size: 40px;
+      line-height: 40px;
       text-decoration: none;
       color: black;
+      @include breakpoint(tablet){
+        font-size: 48px;
+        line-height: 47px;
+      }
       &:hover{
         cursor: pointer;
         text-decoration: underline;
@@ -268,14 +272,14 @@ $font-family-tertiary: "Arial", sans-serif;
       font-family: $font-family-tertiary;
       text-transform: uppercase;
       color: #767676;
-      font-size: 1vw;
+      font-size: 11px;
       margin: 10% 0 10% 0;
     }
 
     &-sub, &-link {
       font-family: $font-family-secondary;
       color: #131313;
-      font-size: 1.3vw;
+      font-size: 14px;
       margin: 8% 0 15% 0;
     }
 
