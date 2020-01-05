@@ -12,8 +12,8 @@
 
 // vars
 
-$font-family-primary: "Springville", sans-serif;
-$font-family-secondary: "ACaslon", sans-serif;
+$font-family-primary: "Springville", serif;
+$font-family-secondary: "ACaslon", serif;
 $font-family-tertiary: "Arial", sans-serif;
 
 //responsive
@@ -140,13 +140,15 @@ $font-family-tertiary: "Arial", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .dropdown {
+  
   position: fixed;
-  top: 60px;
   align-self: flex-end;
   text-align: right;
+  margin-top: 15px;
   
 
   ul {
@@ -167,5 +169,57 @@ $font-family-tertiary: "Arial", sans-serif;
 
 }
 
+//Carousel
+
+.carousel {
+  font-family: $font-family-primary;
+  color: #ffffff;
+  margin: auto;
+  max-width: 1440px;
+
+  &-wrapper {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1440px;
+    top: 28%;
+    
+  }
+
+  &-copy {
+    padding-left: calc(100vw * 0.1);
+    padding-right: calc(100vw * 0.1);
+  }
+
+  &-title {
+    font-size: 4vw;
+    line-height: 0px;
+    // @include breakpoint(tablet) {
+    //   font-size: 44px;
+    //   line-height: 0px;
+    // }
+  }
+
+  &-date {
+    font-family: $font-family-secondary;
+    font-size: 2.2vw;
+    // line-height: 2px;
+    // @include breakpoint(tablet) {
+    //   font-size: 26px;
+    //   line-height: 0px;
+    // }
+  }
+
+  &-body {
+    font-family: $font-family-secondary;
+    font-size: 1.5vw;
+    // @include breakpoint(tablet) {
+    //   font-size: 17px;
+    //   line-height: 16px;
+    // }
+  }
+}
 
 
