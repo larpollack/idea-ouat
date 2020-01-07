@@ -184,7 +184,16 @@ $font-family-tertiary: "Arial", sans-serif;
   margin: auto;
   max-width: 1440px;
   background-size: cover;
-  padding-bottom: 5%;
+  // padding-bottom: 5%;
+
+  .control-dots {
+    position: relative;
+    bottom: 0;
+    margin: 10px 0 20px 0;
+    text-align: center;
+    width: 100%;
+    padding-inline-start: 0px;
+  }
 
   &-wrapper {
     position: absolute;
@@ -193,7 +202,7 @@ $font-family-tertiary: "Arial", sans-serif;
     justify-content: flex-start;
     width: 100%;
     max-width: 1440px;
-    top: 28%;
+    top: 26%;
     
   }
 
@@ -203,7 +212,7 @@ $font-family-tertiary: "Arial", sans-serif;
   }
 
   &-title {
-    font-size: 4vw;
+    font-size: 4.8vw;
     line-height: 0px;
     // @include breakpoint(tablet) {
     //   font-size: 44px;
@@ -213,8 +222,8 @@ $font-family-tertiary: "Arial", sans-serif;
 
   &-date {
     font-family: $font-family-secondary;
-    font-size: 2.2vw;
-    // line-height: 2px;
+    font-size: 3vw;
+    line-height: 2px;
     // @include breakpoint(tablet) {
     //   font-size: 26px;
     //   line-height: 0px;
@@ -223,7 +232,7 @@ $font-family-tertiary: "Arial", sans-serif;
 
   &-body {
     font-family: $font-family-secondary;
-    font-size: 1.5vw;
+    font-size: 2.6vw;
     // @include breakpoint(tablet) {
     //   font-size: 17px;
     //   line-height: 16px;
@@ -233,33 +242,49 @@ $font-family-tertiary: "Arial", sans-serif;
 
 // main
 
-  .main-grid {
-    width: 100%;
+.main-grid {
+  display: flex;
+  max-width: 1440px;
     height: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 5%;
     font-family: $font-family-primary;
-    column-count: 2;
-    column-gap: 5%;
-    padding: 0 5% 5% 5%;
-
-    @include breakpoint(tablet) {
-      column-count: 3;
-    }
-
+    
+    
     &-wrapper {
-      break-inside: avoid-column;
+      justify-content: space-evenly;
+      padding: 0 5% 5% 5%;
+      flex-grow: 1;
+    width: 50%;
+
+      @include breakpoint(tablet) {
+        width: 30%;
+      }
+      
+      
+        
+      }
+      
     }
-  }
+  
 
   .main {
+    // width: 50%;
+    // @include breakpoint(tablet) {
+    //  width: 32%;
+    // }
     &-img {
       width: 100%;
+      
     }
     &-body {
-      font-size: 40px;
-      line-height: 40px;
+      font-size: 27px;
+      line-height: 28px;
       text-decoration: none;
       color: black;
-      @include breakpoint(tablet){
+      word-wrap: break-word;
+      @include breakpoint(phablet){
         font-size: 48px;
         line-height: 47px;
       }
@@ -272,15 +297,21 @@ $font-family-tertiary: "Arial", sans-serif;
       font-family: $font-family-tertiary;
       text-transform: uppercase;
       color: #767676;
-      font-size: 11px;
+      font-size: 10px;
       margin: 10% 0 10% 0;
+      @include breakpoint(phablet) {
+        font-size: 11px;
+      }
     }
 
     &-sub, &-link {
       font-family: $font-family-secondary;
       color: #131313;
-      font-size: 14px;
+      font-size: 12px;
       margin: 8% 0 15% 0;
+      @include breakpoint(phablet) {
+        font-size: 14px;
+      }
     }
 
     &-link {
